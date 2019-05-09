@@ -1,6 +1,4 @@
-# Maintainer: Jose Riha <jose1711 gmail com>
-# Contributor: Patrick Jackson <PatrickSJackson gmail com>
-# Contributor: Christoph Vigano <mail@cvigano.de>
+# Maintainer: Max O'Cull <max ocull protonmail com>
 
 pkgname=st
 pkgver=0.8.2
@@ -30,5 +28,5 @@ package() {
   install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
   install -Dm644 README "$pkgdir/usr/share/doc/$pkgname/README"
   # remove to avoid conflict with ncurses
-  rm "${pkgdir}/usr/share/terminfo/s/st" "${pkgdir}/usr/share/terminfo/s/st-256color" 
+  rm "${pkgdir}/usr/share/terminfo/s/st" "${pkgdir}/usr/share/terminfo/s/st-256color"
 }
