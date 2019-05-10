@@ -15,10 +15,12 @@ sha256sums=('aeb74e10aa11ed364e1bcc635a81a523119093e63befd2f231f8b0705b15bf35' '
 prepare() {
   # user is supposed to maintain config.h him/herself
   cp $srcdir/config.h $srcdir/$pkgname-$pkgver/config.h
+  wget https://st.suckless.org/patches/alpha/st-alpha-$pkgver.diff -O $srcdir/$pkgname-$pkgver/alpha-patch.diff
 }
 
 build() {
   cd $srcdir/$pkgname-$pkgver
+  patch -p1 < alpha-patch.diff
   make X11INC=/usr/include/X11 X11LIB=/usr/lib/X11
 }
 
