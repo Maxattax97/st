@@ -1,4 +1,11 @@
 # Maintainer: Max O'Cull <max ocull protonmail com>
+# Forgot how to install it again?
+# For local compilation:
+#     makepkg --syncdeps
+# For installing the .tar.xz package to system:
+#     makepkg --install
+# Don't forget to install fonts and run:
+#     xrdb ~/.Xdefaults
 
 pkgname=st
 pkgver=0.8.2
@@ -45,10 +52,10 @@ prepare() {
 
 build() {
   cd $srcdir/$pkgname-$pkgver
+  patch -p1 < boxdraw-patch.diff
   patch -p1 < alpha-patch.diff
   patch -p1 < anysize-patch.diff
   patch -p1 < xresources-patch.diff
-  patch -p1 < boxdraw-patch.diff
   make X11INC=/usr/include/X11 X11LIB=/usr/lib/X11
 }
 
