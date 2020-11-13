@@ -12,6 +12,7 @@ tar -xzvf "$srcdir/$pkgname-$pkgver.tar.gz"
 wget -N "${source[3]}" -P "$srcdir/"
 wget -N "${source[4]}" -P "$srcdir/"
 wget -N "${source[5]}" -P "$srcdir/"
+wget -N "${source[6]}" -P "$srcdir/"
 
 prepare
 build

@@ -3,3 +3,5 @@
 src/
 pkg/
 st-*.diff
+st-*/
+.ccls-cache/
