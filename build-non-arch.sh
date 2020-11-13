@@ -16,3 +16,5 @@ wget -N "${source[6]}" -P "$srcdir/"
 
 prepare
 build
+
+# sudo cp st-*/st /usr/local/bin/st
